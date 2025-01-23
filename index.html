@@ -28,6 +28,24 @@
                  },
                };
           </script>
+          <style>
+            #slider-container {
+              width: 100%;
+              overflow: hidden;
+              position: relative;
+          }
+          
+          #slider {
+              display: flex;
+              transition: transform 0.5s ease-in-out;
+              width: max-content; /* Ensures the slider can be longer than its container */
+          }
+          
+          .slider-item {
+              flex: 0 0 auto;
+          }
+          
+          </style>
     </head>
 <body class="font-sia  mx-auto">
     <!-- navbar -->
@@ -141,25 +159,27 @@
                 </svg>
             </div>
         </div>
-        <div class="flex gap-4 text-white">
-            <div >
-                <img src="../images/peng.png" alt="" class="relative rounded w-[256px] h-[400px] object-cover ">
-                <span class="relative -mt-10  z-10 text-[20px] md:text-[28px]  ">Chair</span>
-            </div>
-            <div>
-                <img src="../images/mclean.png" alt=""class ="w-[256px] h-[400px] object-cover rounded">
-                <span>Bed</span>
-
-            </div>
-            <div>
-                <img src="../images/sanibell.png" alt="" class="w-[256px] h-[400px] object-cover rounded">
-                <span>Cupboard</span>
-            </div>
-            <div>
-                <img src="../images/jean.png" alt="" class="w-[256px] h-[400px] object-cover rounded">
-                <span>Lighting</span>
-            </div>
-        </div>
+        <div id="slider-container" class="overflow-hidden">
+          <div id="slider" class="flex gap-4 transition-transform duration-500">
+              <div class="slider-item text-center">
+                  <img src="../images/peng.png" alt="Chair" class="rounded w-[256px] h-[400px] object-cover">
+                  <span class="block mt-2  text-[20px]">Chair</span>
+              </div>
+              <div class="slider-item text-center">
+                  <img src="../images/mclean.png" alt="Bed" class="rounded w-[256px] h-[400px] object-cover">
+                  <span class="block mt-2 text-[20px]">Bed</span>
+              </div>
+              <div class="slider-item text-center">
+                  <img src="../images/sanibell.png" alt="Cupboard" class="rounded w-[256px] h-[400px] object-cover">
+                  <span class="block mt-2 text-[20px]">Cupboard</span>
+              </div>
+              <div class="slider-item text-center">
+                  <img src="../images/jean.png" alt="Lighting" class="rounded w-[256px] h-[400px] object-cover">
+                  <span class="block mt-2 text-[20px]">Lighting</span>
+              </div>
+          </div>
+      </div>
+      
     </section>
 
     <section class="space-y-10  mx-auto">
@@ -255,7 +275,7 @@
         </div>
     </footer>
 
-    
+    <script src="index.js"></script>
    
 </body>
 </html>
